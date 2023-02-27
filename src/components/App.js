@@ -1,13 +1,17 @@
-import React,{useState} from 'react'
+import React,{useState , useEffect} from 'react'
 import '../styles/App.css';
 const App = () => {
- const [isTrue , setTrue] = useState(false);
+ const [counter , setCounter] = useState(false);
+ const [text , setText] = useState('');
 
  
+ 
+
  const handleDoubleClick = (event) =>{
-   if(event.detail === 2) console.log("I was double clicked" );
-   else if(event.detail === 1)
-    console.log("I was not double cliked");
+  switch(event.detail){
+    case 1: console.log("I was not double clicked"); break;
+    case 2: console.log("I was double clicked"); break;
+  }
 }
 
   return (
